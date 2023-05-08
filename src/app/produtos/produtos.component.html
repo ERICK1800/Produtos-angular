@@ -1,5 +1,24 @@
 <div class="row pe-3 ps-3 mt-5 mb-5">
     <div class="col">
-        {{produtos | json}}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">NOME</th>
+                    <th scope="col">TAMANHO</th>
+                    <th scope="col">PESO</th>
+                    <th scope="col">ESTOQUE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let produto of produtos">
+                    <th scope="row">{{produto.id}}</th>
+                    <td>{{produto.name}}</td>
+                    <td>{{produto.size}} cm</td>
+                    <td>{{produto.weight}} kg</td>
+                    <td>{{produto.stock}} uni</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
